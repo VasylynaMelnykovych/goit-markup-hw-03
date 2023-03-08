@@ -113,11 +113,12 @@ button {
 }
 
 .hero-title {
-  margin-bottom: 40px;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--primary-white-color);
+  max-width: 496px;
+  margin: 0 auto;
 }
 
 .modal-btn {
@@ -132,6 +133,7 @@ button {
   letter-spacing: 0.04em;
   color: var(--primary-white-color);
   background: var(--accent-color);
+  margin-top: 48px;
 }
 
 .modal-btn:hover,
@@ -165,6 +167,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  margin-top: 8px;
 }
 
 .team-section {
@@ -193,15 +196,6 @@ button {
 .team-list {
   margin-top: 72px;
 }
-
-.portfolio-section {
-  padding-top: 96px;
-  padding-bottom: 120px;
-}
-
-.portfolio-list {
-  margin-top: 72px;
-}
 /* ================ /SECTIONS  ================= */
 
 /* ================ FOOTER ================= */
@@ -226,10 +220,28 @@ button {
   background: var(--cloud-color);
   border: 1px solid var(--cornflower-color);
   border-radius: 4px;
+  padding: 12px 24px;
 }
 .filters-btn:hover,
 .filters-btn:focus {
   color: var(--primary-white-color);
   background: var(--pointing-state-color);
+}
+
+.portfolio-section {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.portfolio-list {
+  margin-top: 72px;
+}
+
+.border-text {
+  width: 360px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border: 1px solid #e7e9fc;
 }
 /* ================ /PORTFOLIO SECTION ================= */
