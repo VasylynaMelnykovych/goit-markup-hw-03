@@ -73,9 +73,67 @@ button {
   color: var(--cloud-color);
 }
 
+.title {
+  margin-bottom: 72px;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--secondary-text-color);
+}
+
+.caption {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  margin-bottom: 8px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
 /* ================ /COMPONENTS ================= */
 
 /* ================ HEADER ================== */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.logo-link {
+  margin-right: 76px;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .top-header {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -119,13 +177,14 @@ button {
   color: var(--primary-white-color);
   max-width: 496px;
   margin: 0 auto;
+  margin-bottom: 48px;
 }
 
 .modal-btn {
-  border: 1px solid transparent;
+  border: 0 solid transparent;
   border-radius: 4px;
-  padding: 16px 32px;
   min-width: 169px;
+  padding: 16px 32px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -133,7 +192,6 @@ button {
   letter-spacing: 0.04em;
   color: var(--primary-white-color);
   background: var(--accent-color);
-  margin-top: 48px;
 }
 
 .modal-btn:hover,
@@ -143,42 +201,18 @@ button {
 
 /* ================ /HERO IMAGE ================= */
 
-/* ================ SECTIONS  ================= */
-.title {
-  margin-bottom: 72px;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--secondary-text-color);
-}
-
-.caption {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-}
-
-.text {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  margin-top: 8px;
-}
-
-.team-section {
-  background: var(--cloud-color);
-}
-
+/* ================ SKILLS SECTION  ============== */
 .skills-section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
+.skills-list {
+  display: flex;
+}
+/* ================ /SKILLS SECTION  ============== */
+
+/* ================ WORK SECTION  ================ */
 .work-section {
   padding-top: 0;
   padding-bottom: 120px;
@@ -186,22 +220,33 @@ button {
 
 .work-list {
   margin-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
+/* ================ /WORK SECTION  =============== */
+
+/* ================ TEAM SECTION  ================ */
 .team-section {
+  background: var(--cloud-color);
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
 .team-list {
   margin-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
 }
-/* ================ /SECTIONS  ================= */
+/* ================ /TEAM SECTION  =============== */
 
 /* ================ FOOTER ================= */
 .footer-text {
   color: var(--cornflower-color);
+  margin-top: 16px;
 }
+
 .footer-page {
   background: var(--secondary-text-color);
   padding-top: 100px;
@@ -222,6 +267,7 @@ button {
   border-radius: 4px;
   padding: 12px 24px;
 }
+
 .filters-btn:hover,
 .filters-btn:focus {
   color: var(--primary-white-color);
@@ -233,8 +279,17 @@ button {
   padding-bottom: 120px;
 }
 
+.filters-list {
+  margin-bottom: 72px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .portfolio-list {
-  margin-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
 }
 
 .border-text {
@@ -243,5 +298,6 @@ button {
   padding-bottom: 32px;
   padding-left: 16px;
   border: 1px solid #e7e9fc;
+  border-top: none;
 }
 /* ================ /PORTFOLIO SECTION ================= */
