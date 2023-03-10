@@ -27,6 +27,8 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 address {
@@ -98,6 +100,31 @@ button {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.flex-list {
+  margin-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ================ /COMPONENTS ================= */
 
 /* ================ HEADER ================== */
@@ -137,6 +164,7 @@ button {
 .top-header {
   padding-top: 24px;
   padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .menu-link {
@@ -202,43 +230,45 @@ button {
 /* ================ /HERO IMAGE ================= */
 
 /* ================ SKILLS SECTION  ============== */
-.skills-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.skills-list {
+  margin-top: 0;
 }
 
-.skills-list {
-  display: flex;
+.skills-item {
+  flex-basis: calc((100% - 72px) / 4);
 }
 /* ================ /SKILLS SECTION  ============== */
 
 /* ================ WORK SECTION  ================ */
 .work-section {
   padding-top: 0;
-  padding-bottom: 120px;
 }
 
-.work-list {
-  margin-top: 72px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+.work-item {
+  flex-basis: calc((100% - 48px) / 3);
 }
-
 /* ================ /WORK SECTION  =============== */
 
 /* ================ TEAM SECTION  ================ */
 .team-section {
   background: var(--cloud-color);
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 
-.team-list {
-  margin-top: 72px;
-  display: flex;
-  flex-wrap: wrap;
+.team-item {
+  flex-basis: calc((100% - 72px) / 4);
 }
+
+.team-text {
+  padding: 32px 16px;
+  background: #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* ================ /TEAM SECTION  =============== */
 
 /* ================ FOOTER ================= */
@@ -276,13 +306,14 @@ button {
 
 .portfolio-section {
   padding-top: 96px;
-  padding-bottom: 120px;
 }
 
 .filters-list {
   margin-bottom: 72px;
   display: flex;
   flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
 }
 
 .portfolio-list {
@@ -290,6 +321,10 @@ button {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
+}
+
+.portfolio-item {
+  flex-basis: calc((100% - 48px) / 3);
 }
 
 .border-text {
